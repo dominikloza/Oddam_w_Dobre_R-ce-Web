@@ -1,0 +1,35 @@
+.firstSection {
+  height: calc(100vh - 167px);
+  .firstPhoto {
+    height: 963px;
+    position: absolute;
+    top: 0;
+    left: -500px;
+  }
+
+  .title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+
+  .firstSectionContent {
+    position: absolute;
+    top: 350px;
+    right: 300px;
+    width: 675px;
+
+    a {
+      text-decoration: none;
+      color: $color-text;
+    }
+
+    .decoration {
+      margin-top: 5px;
+      margin-left: calc(50%);
+      transform: translateX(-50%);
+      margin-bottom: 65px;
+    }
+  }
+}

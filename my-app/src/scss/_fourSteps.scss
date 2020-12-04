@@ -1,0 +1,68 @@
+.fourSteps {
+  padding: 55px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .fourStepsTitle {
+    font-size: 38px;
+    margin-bottom: 38px;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: $color-text;
+  }
+
+  .steps {
+    background: $color-primary;
+    width: 100%;
+    height: 325px;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+
+  .singleStep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 160px;
+
+    img {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 9px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 22px;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+      line-height: 20px;
+    }
+
+
+
+
+    .line {
+      border: 1px solid $color-text;
+      width: 70px;
+      margin-bottom: 9px;
+    }
+  }
+
+  .toPlaceSteps {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+  }
+}

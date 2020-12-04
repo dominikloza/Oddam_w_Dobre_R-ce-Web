@@ -1,0 +1,44 @@
+.header {
+  padding: 30px 20px ;
+  .bottomMenu,
+  .upperMenu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+  }
+
+  .upperMenu {
+    margin-bottom: 30px;
+    & li:first-child {
+      margin-right: 30px;
+    }
+    a {
+      text-decoration: none;
+    }
+    & li {
+      font-size: 14px;
+      color: $color-alt;
+      padding: 9px 10px;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid $color-accent;
+        padding: 8px 9px;
+      }
+    }
+  }
+
+  .bottomMenu {
+    & li {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin-left: 25px;
+      cursor: pointer;
+
+      &:hover {
+
+        border: 1px solid $color-text;
+        padding: 9px 19px;
+      }
+    }
+  }
+}
