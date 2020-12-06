@@ -6,6 +6,10 @@
     justify-content: flex-end;
     list-style: none;
   }
+  a {
+    text-decoration: none;
+    color: $color-text;
+  }
 
   .upperMenu {
     margin-bottom: 30px;
@@ -33,6 +37,7 @@
       padding: 10px 20px;
       margin-left: 25px;
       cursor: pointer;
+
 
       &:hover {
 

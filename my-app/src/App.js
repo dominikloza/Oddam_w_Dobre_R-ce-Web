@@ -7,14 +7,18 @@ import {
     Link
 } from "react-router-dom";
 import Home from "./components/Home";
+import LoginFormPage from "./components/LoginFormPage";
 
 
 function App() {
     return (
         <Router>
             <Switch>
-                <Route path="/">
+                <Route exact path="/">
                     <Home/>
+                </Route>
+                <Route path="/logowanie">
+                    <LoginFormPage/>
                 </Route>
             </Switch>
         </Router>

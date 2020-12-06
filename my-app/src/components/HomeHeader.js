@@ -15,16 +15,10 @@ function HomeHeader() {
                         </LinkTo>
                 </ul>
                 <ul className="bottomMenu">
+                    <LinkTo
+                        to="/"
+                    ><li>Start</li></LinkTo>
                     <Link
-                        activeClass="active"
-                        to="section1"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                    ><li className="active">Start</li></Link>
-                    <Link
-                        activeClass="active"
                         to="sectionFourSteps"
                         spy={true}
                         smooth={true}
@@ -32,27 +26,21 @@ function HomeHeader() {
                         duration={500}
                     ><li>O co chodzi?</li></Link>
                     <Link
-                        activeClass="active"
-                        to="sectionFourSteps"
+                        to="aboutUs"
                         spy={true}
                         smooth={true}
-                        offset={-70}
                         duration={500}
                     ><li>O nas</li></Link>
                     <Link
-                        activeClass="active"
-                        to="section1"
+                        to="foundations"
                         spy={true}
                         smooth={true}
-                        offset={-70}
                         duration={500}
                     ><li>Fundacja i organizacje</li></Link>
                     <Link
-                        activeClass="active"
-                        to="section1"
+                        to="contact"
                         spy={true}
                         smooth={true}
-                        offset={-70}
                         duration={500}
                     ><li>Kontakt</li></Link>
                 </ul>
