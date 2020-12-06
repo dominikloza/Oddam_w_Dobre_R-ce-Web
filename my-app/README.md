@@ -1,5 +1,34 @@
 # Oddam w Dobre Ręce
 
+## General info
+> Project of web where u can give unnecessary toys, clothes, consumer electronics, to foundations or organizations.
+
+## Technologies
+* React
+* JS
+* HTML & CSS
+* Font Awesome
+* SaSS
+* FireBase ( FireStore, Authentication )
+* Webpack
+
+
+## Features
+List of features
+* Register and Login
+* Choosing preferences
+* Drawing a movie for Today
+
+ In the future 
+* Adding friends
+* Links where you can watch movie
+* Cast of the film
+
+
+## Status
+Project is: _In_Progress_
+.
+
 ## Available Scripts
 
 In the project directory, you can run:
