@@ -69,6 +69,7 @@ const HomeContact = () => {
                                 id="name"
                                 name="name"
                                 type="text"
+                                className={formik.errors.name ? "errorInput" : null}
                                 onChange={formik.handleChange}
                                 value={formik.values.name}
                                 placeholder="Karol"
@@ -81,6 +82,7 @@ const HomeContact = () => {
                                 id="email"
                                 name="email"
                                 type="email"
+                                className={formik.errors.email ? "errorInput" : null}
                                 onChange={formik.handleChange}
                                 value={formik.values.email}
                                 placeholder="abc@xyz.pl"
@@ -93,6 +95,7 @@ const HomeContact = () => {
                         <textarea
                             id="message"
                             name="message"
+                            className={formik.errors.message ? "errorInput" : null}
                             onChange={formik.handleChange}
                             value={formik.values.message}
                             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."

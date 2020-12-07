@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./components/Home";
 import LoginFormPage from "./components/LoginFormPage";
+import RegisterFormPage from "./components/RegisterFormPage";
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
                 </Route>
                 <Route path="/logowanie">
                     <LoginFormPage/>
+                </Route>
+                <Route path="/rejestracja">
+                    <RegisterFormPage/>
                 </Route>
             </Switch>
         </Router>

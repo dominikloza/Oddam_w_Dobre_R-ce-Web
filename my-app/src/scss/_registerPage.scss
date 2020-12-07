@@ -1,4 +1,4 @@
-.loginPage {
+.registerPage {
   height: calc(100vh - 160px);
 
   &__content {
@@ -25,7 +25,7 @@
       background: #f0f1f1;
       height: 195px;
       width: 263px;
-      padding: 40px 50px 0 50px;
+      padding: 60px 50px 60px 50px;
       align-items: center;
       margin-bottom: 40px;
 
@@ -37,7 +37,7 @@
       input {
         border: 0;
         border-bottom: 1px solid $color-text;
-        margin-bottom: 37px;
+        margin-bottom: 32px;
         padding: 5px;
         background: none;
         width: 253px;
@@ -48,15 +48,17 @@
 
       .error {
         color: red;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         font-size: 12px;
         font-weight: 600;
         align-self: flex-start;
       }
 
+
+
       .errorInput {
-        border-color: red;
         margin-bottom: 10px;
+        border-color: red;
       }
 
       button {
@@ -71,7 +73,7 @@
 
     }
 
-    .register {
+    .login {
       position: absolute;
       bottom: -80px;
       left: -80px;

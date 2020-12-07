@@ -126,6 +126,7 @@ const HomeFoundations = () => {
 
     const changeFound = (index) => {
         setActiveButtonIndex(index)
+        setCurrentPage(1);
     }
 
     const buttons = [
