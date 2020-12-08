@@ -7,18 +7,22 @@ import HomeAboutUs from "./HomeAboutUs";
 import HomeFoundations from "./HomeFoundations";
 import HomeContact from "./HomeContact";
 import ScrollArrow from "./ScrollArrow";
+import Logout from "./Logout";
 
-function Home() {
+function Home({user, isLogged, setIsLogged}) {
+
+    console.log(user)
     return (
         <>
             <ScrollArrow/>
-            <HomeHeader/>
+            <HomeHeader user={user} isLogged={isLogged} setIsLogged={setIsLogged}/>
             <HomeFirstSection/>
             <HomeThreeColumns/>
             <HomeFourSteps/>
             <HomeAboutUs/>
             <HomeFoundations/>
             <HomeContact/>
+            <Logout user={user}/>
         </>
     )
 }

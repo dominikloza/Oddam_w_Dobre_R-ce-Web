@@ -2,9 +2,12 @@ import React from 'react';
 import HomeHeader from "./HomeHeader";
 import decoration from '../assets/Decoration.svg';
 import {useFormik} from "formik";
+import fire from "../firebase";
+import { useHistory } from "react-router-dom";
 
 const RegisterFormPage = () => {
 
+    let history = useHistory();
 
     const validate = values => {
         const errors = {};
@@ -31,8 +34,12 @@ const RegisterFormPage = () => {
             passwordRepeat: '',
         },
         validate,
-        onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+        onSubmit: () => {
+            fire.auth().createUserWithEmailAndPassword(formik.values.email, formik.values.password).then(() => {
+                history.push("/");
+            }).catch((error) => {
+                console.log(error);
+            });
         },
     });
 

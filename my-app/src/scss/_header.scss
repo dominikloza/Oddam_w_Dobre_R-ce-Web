@@ -1,32 +1,51 @@
 .header {
-  padding: 30px 20px ;
+  padding: 30px 20px;
+
   .bottomMenu,
   .upperMenu {
     display: flex;
     justify-content: flex-end;
     list-style: none;
   }
+
   a {
     text-decoration: none;
     color: $color-text;
   }
 
   .upperMenu {
+    display: flex;
+    align-items: center;
     margin-bottom: 30px;
+
+    h2 {
+      margin-right: 20px;
+    }
+
     & li:first-child {
       margin-right: 30px;
     }
+
     a {
       text-decoration: none;
     }
+
+    .give {
+      border: 1px solid $color-accent;
+      &:hover {
+
+      }
+    }
+
     & li {
       font-size: 14px;
       color: $color-alt;
       padding: 9px 10px;
       cursor: pointer;
+      border: 1px solid #fff;
+
       &:hover {
-        border: 1px solid $color-accent;
-        padding: 8px 9px;
+        border-color: $color-accent;
       }
     }
   }
