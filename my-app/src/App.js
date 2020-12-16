@@ -12,6 +12,8 @@ import LoginFormPage from "./components/LoginFormPage";
 import RegisterFormPage from "./components/RegisterFormPage";
 import Logout from "./components/Logout";
 import fire from './firebase';
+import Form from "./components/Form5Step";
+import Form5Step from "./components/Form5Step";
 
 function App() {
 
@@ -45,6 +47,9 @@ function App() {
                 </Route>
                 <Route path="/rejestracja" component={RegisterFormPage}/>
                 <Route path="/wylogowano" component={Logout}/>
+                <Route path="/oddaj-rzeczy">
+                     <Form5Step user={user} isLogged={isLogged} setIsLogged={setIsLogged}/>
+                </Route>
             </Switch>
         </Router>
     );

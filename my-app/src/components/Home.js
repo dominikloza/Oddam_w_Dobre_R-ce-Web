@@ -7,7 +7,6 @@ import HomeAboutUs from "./HomeAboutUs";
 import HomeFoundations from "./HomeFoundations";
 import HomeContact from "./HomeContact";
 import ScrollArrow from "./ScrollArrow";
-import Logout from "./Logout";
 
 function Home({user, isLogged, setIsLogged}) {
 
@@ -22,7 +21,6 @@ function Home({user, isLogged, setIsLogged}) {
             <HomeAboutUs/>
             <HomeFoundations/>
             <HomeContact/>
-            <Logout user={user}/>
         </>
     )
 }

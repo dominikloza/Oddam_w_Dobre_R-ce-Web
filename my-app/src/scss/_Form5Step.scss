@@ -1,0 +1,311 @@
+.formSection {
+  height: calc(100vh - 167px);
+
+  .formPhoto {
+    height: 963px;
+    position: absolute;
+    top: 0;
+    left: -200px;
+  }
+
+  &_text {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+
+  .title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+
+  &_Content {
+    position: absolute;
+    top: 350px;
+    right: 300px;
+    width: 720px;
+
+
+    .decoration {
+      margin-top: 5px;
+      margin-left: calc(50%);
+      transform: translateX(-50%);
+      margin-bottom: 20px;
+    }
+
+    .fourStep {
+      display: flex;
+      justify-content: center;
+
+      .button_content {
+        position: absolute;
+        text-align: center;
+        line-height: 30px;
+        transform: rotate(-45deg);
+        font-size: 20px;
+        font-weight: 300;
+      }
+
+      &__Button {
+        margin-left: 20px;
+        border: 1px solid $color-text;
+        width: 120px;
+        height: 120px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(45deg);
+      }
+
+
+    }
+
+  }
+}
+
+.warning {
+  background: $color-accent;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 150px;
+  font-size: 22px;
+  line-height: 30px;
+
+  span {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+}
+
+.firstStep,
+.secondStep,
+.thirdStep,
+.fourthStep {
+  background-image: url("../assets/Background-Form.png");
+  height: 880px;
+  padding-top: 30px;
+  position: relative;
+
+  h3 {
+    color: $color-text;
+    font-size: 24px;
+    font-weight: 300;
+    padding-bottom: 70px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 60px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 365px;
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      input:checked ~ span {
+        background: $color-accent;
+      }
+
+
+      label {
+        display: block;
+        position: relative;
+        padding-left: 70px;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 300;
+
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateY(-25%);
+          height: 40px;
+          width: 40px;
+          border: 1px solid $color-text;
+          cursor: pointer;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .form_button {
+      border: 1px solid $color-alt;
+      background: none;
+      height: 80px;
+      width: 180px;
+      font-size: 24px;
+      font-weight: 200;
+      color: $color-text;
+      position: absolute;
+      bottom: 50px;
+      left: 400px;
+      cursor: pointer;
+    }
+
+    .form_button.back {
+      bottom: 50px;
+      left: 150px;
+    }
+
+  }
+}
+
+.secondStep {
+  form {
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: baseline;
+
+    label {
+      height: 50px;
+      font-size: 24px;
+      margin-right: 25px;
+    }
+
+    select {
+      background: none;
+      height: 50px;
+      width: 300px;
+      font-size: 24px;
+      font-weight: 300;
+      padding: 10px;
+    }
+  }
+}
+
+.thirdStep {
+  form {
+    justify-content: unset;
+
+    h3 {
+      margin-top: 50px;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    div {
+      width: 680px;
+
+      .buttonCheckBox {
+        padding: 11px 26px;
+        border: 1px solid $color-alt;
+        font-size: 24px;
+        margin-right: 24px;
+        color: $color-text;
+        font-weight: 300;
+        margin-bottom: 24px;
+        cursor: pointer;
+      }
+    }
+
+    input {
+      width: 560px;
+      padding: 10px;
+      font-size: 18px;
+      background: none;
+      border: 1px solid $color-text;
+    }
+
+    label {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 600;
+
+      &:first-child {
+        font-size: 36px;
+        font-weight: 600;
+      }
+
+    }
+
+
+    select {
+      background: none;
+      height: 50px;
+      width: 300px;
+      padding: 10px;
+      font-size: 24px;
+      font-weight: 300;
+      margin-top: 30px;
+    }
+  }
+}
+
+.fourthStep {
+  form {
+    display: flex;
+    flex-direction: unset;
+    justify-content: flex-start;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      padding-bottom: 0;
+      margin-bottom: 40px;
+    }
+
+    .form__side {
+      margin-right: 200px;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      width: 100%;
+      label {
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      input {
+        padding: 7px 10px;
+        font-size: 20px;
+        width: 230px;
+        height: 20px;
+        background: none;
+        border: 1px solid $color-text;
+      }
+      textarea {
+        padding: 7px 10px;
+        font-size: 20px;
+        width: 230px;
+        height: 80px;
+        background: none;
+        border: 1px solid $color-text;
+      }
+    }
+  }
+}
