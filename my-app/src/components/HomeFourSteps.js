@@ -8,7 +8,7 @@ import reload from "../assets/Icon-3.png";
 import Button from "./Button";
 import {Link} from "react-router-dom";
 //rsc
-function HomeFourSteps() {
+function HomeFourSteps({isLogged}) {
     return (
         <div className="fourSteps" id="sectionFourSteps">
             <h1 className="fourStepsTitle">Wystarczą 4 proste kroki</h1>
@@ -21,7 +21,7 @@ function HomeFourSteps() {
                         <SingleStep link={reload} text1="Zamów kuriera" text2="kurier przyjedzie w dogodnym terminie"/>
                 </div>
             </div>
-            <Link to="/logowanie"><Button width="310px" height="120px" text1='ODDAJ ' text2="RZECZY" size="34px"/></Link>
+            <Link to={isLogged ? "oddaj-rzeczy" : "/logowanie"}><Button width="310px" height="120px" text1='ODDAJ ' text2="RZECZY" size="34px"/></Link>
         </div>
 
     )

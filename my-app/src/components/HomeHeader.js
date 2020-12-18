@@ -20,7 +20,7 @@ function HomeHeader({user, isLogged, setIsLogged}) {
                     { isLogged ? (
                         <>
                             <h2>Cześć, {user.user.email}</h2>
-                            <LinkTo to="/">
+                            <LinkTo to="/oddaj-rzeczy">
                                 <li className="give">Oddaj rzeczy</li>
                             </LinkTo>
                             <LinkTo to="/wylogowano" onClick={logout}>

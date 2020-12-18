@@ -15,9 +15,9 @@ function Home({user, isLogged, setIsLogged}) {
         <>
             <ScrollArrow/>
             <HomeHeader user={user} isLogged={isLogged} setIsLogged={setIsLogged}/>
-            <HomeFirstSection/>
+            <HomeFirstSection isLogged={isLogged}/>
             <HomeThreeColumns/>
-            <HomeFourSteps/>
+            <HomeFourSteps isLogged={isLogged}/>
             <HomeAboutUs/>
             <HomeFoundations/>
             <HomeContact/>

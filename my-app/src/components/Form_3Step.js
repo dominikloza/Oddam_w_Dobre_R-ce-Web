@@ -4,15 +4,6 @@ import {useFormik} from "formik";
 
 const Form3Step = ({setCurrentStep}) => {
 
-    const formik = useFormik({
-        initialValues: {
-            city: '',
-        },
-        onSubmit: values => {
-            setCurrentStep(4);
-        },
-    });
-
     return (
         <>
             <div className="warning"><span>Ważne!</span>Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej

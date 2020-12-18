@@ -1,8 +1,9 @@
 import {SAVE_DATA} from "./actionTypes";
 
+export const initialState = {};
 
-const reducer = (state = {}, action, data) => {
-    switch (action.type) {
+export const reducer = (state = initialState, {type, data}) => {
+    switch (type) {
         case SAVE_DATA:
             return {
                 ...state,

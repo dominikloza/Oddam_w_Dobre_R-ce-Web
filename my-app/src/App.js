@@ -12,8 +12,10 @@ import LoginFormPage from "./components/LoginFormPage";
 import RegisterFormPage from "./components/RegisterFormPage";
 import Logout from "./components/Logout";
 import fire from './firebase';
-import Form from "./components/Form5Step";
 import Form5Step from "./components/Form5Step";
+import {compose, createStore} from "redux";
+import {Provider} from "react-redux";
+import {reducer} from "./redux/reducer";
 
 function App() {
 
@@ -35,23 +37,27 @@ function App() {
             }
         });
     }
+    const store = createStore(reducer
+    , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
     return (
-        <Router>
-            <Switch>
-                <Route exact path="/">
-                    <Home user={user} isLogged={isLogged} setIsLogged={setIsLogged}/>
-                </Route>
-                <Route path="/logowanie">
-                    {isLogged ? <Redirect to="/"/> : <LoginFormPage/> }
-                </Route>
-                <Route path="/rejestracja" component={RegisterFormPage}/>
-                <Route path="/wylogowano" component={Logout}/>
-                <Route path="/oddaj-rzeczy">
-                     <Form5Step user={user} isLogged={isLogged} setIsLogged={setIsLogged}/>
-                </Route>
-            </Switch>
-        </Router>
+        <Provider store={store}>
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <Home user={user} isLogged={isLogged} setIsLogged={setIsLogged}/>
+                    </Route>
+                    <Route path="/logowanie">
+                        {isLogged ? <Redirect to="/"/> : <LoginFormPage/>}
+                    </Route>
+                    <Route path="/rejestracja" component={RegisterFormPage}/>
+                    <Route path="/wylogowano" component={Logout}/>
+                    <Route path="/oddaj-rzeczy">
+                        <Form5Step user={user} isLogged={isLogged} setIsLogged={setIsLogged}/>
+                    </Route>
+                </Switch>
+            </Router>
+        </Provider>
     );
 }
 
