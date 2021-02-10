@@ -1,7 +1,4 @@
 import React from 'react';
-import {useFormik} from "formik";
-import svg1 from "../assets/IconForm.png"
-import svg2 from '../assets/Icon.png'
 import decoration  from '../assets/Decoration.svg'
 const FormEnd = () => {
 

@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {useFormik} from "formik";
 
 
 const Form2Step = ({setCurrentStep, saveData}) => {
 
-    const [state, setState] = useState({});
 
-    const handleChange = (e) => {
-        setState(e.target.value);
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        saveData(state);
-        setCurrentStep(3);
-    }
+    const formik = useFormik({
+        initialValues: {
+            numOfBags: '',
+        },
+        onSubmit: values => {
+            saveData(values);
+            setCurrentStep(3);
+        },
+    });
     return (
         <>
             <div className="warning"><span>Ważne!</span>Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak poprawnie spakować rzeczy znajdziesz TUTAJ.
@@ -22,9 +22,9 @@ const Form2Step = ({setCurrentStep, saveData}) => {
                 <div className="container">
                     <h3>Krok 2/4</h3>
                     <h2>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</h2>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={formik.handleSubmit}>
                         <label htmlFor="numOfBags">Liczba 60l worków:</label>
-                        <select id="numOfBags" name="numOfBags" form="numOfBags"  value={state.value} onChange={handleChange}>
+                        <select id="numOfBags" name="numOfBags" form="numOfBags"  value={formik.values.bags} onChange={formik.handleChange}>
                             <option disabled selected> — wybierz — </option>
                             <option value="1">1</option>
                             <option value="2">2</option>

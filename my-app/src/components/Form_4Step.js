@@ -2,7 +2,7 @@ import React from 'react';
 import {useFormik} from "formik";
 
 
-const Form4Step = ({setCurrentStep}) => {
+const Form4Step = ({setCurrentStep, saveData}) => {
 
     const formik = useFormik({
         initialValues: {
@@ -12,9 +12,10 @@ const Form4Step = ({setCurrentStep}) => {
             phone: '',
             date: '',
             hour: '',
-            comment: '',
+            comments: '',
         },
         onSubmit: values => {
+            saveData(values);
             setCurrentStep(5)
         },
     });

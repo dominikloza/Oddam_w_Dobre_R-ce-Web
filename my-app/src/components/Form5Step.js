@@ -3,7 +3,6 @@ import HomeHeader from "./HomeHeader";
 import HomeContact from "./HomeContact";
 import photo from "../assets/Header-Form-Background.png";
 import decoration from "../assets/Decoration.svg";
-import Button from "./Button";
 import Form1Step from "./Form_1Step";
 import Form2Step from "./Form_2Step";
 import Form3Step from "./Form_3Step";
@@ -43,8 +42,8 @@ const Form5Step = ({user, isLogged, setIsLogged, saveDataDispatch}) => {
             </div>
             {(currentStep === 1) && <Form1Step setCurrentStep={setCurrentStep} saveData={saveDataDispatch}/>}
             {(currentStep === 2) && <Form2Step setCurrentStep={setCurrentStep} saveData={saveDataDispatch}/>}
-            {(currentStep === 3) && <Form3Step setCurrentStep={setCurrentStep}/>}
-            {(currentStep === 4) && <Form4Step setCurrentStep={setCurrentStep}/>}
+            {(currentStep === 3) && <Form3Step setCurrentStep={setCurrentStep}  saveData={saveDataDispatch}/>}
+            {(currentStep === 4) && <Form4Step setCurrentStep={setCurrentStep}  saveData={saveDataDispatch}/>}
             {(currentStep === 5) && <FormSummary setCurrentStep={setCurrentStep}/>}
             {(currentStep === 6) && <FormEnd setCurrentStep={setCurrentStep}/>}
             <HomeContact/>

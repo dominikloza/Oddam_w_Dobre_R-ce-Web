@@ -3,17 +3,16 @@ import svg1 from "../assets/IconForm.png"
 import svg2 from '../assets/Icon.png'
 import {connect} from "react-redux";
 
-const FormSummary = ({setCurrentStep, kartofel}) => {
+const FormSummary = ({setCurrentStep, all}) => {
 
-    console.log(kartofel)
     return (
         <>
             <div className="formSummary">
                 <div className="container">
                     <h2>Podsumowanie Twojej darowizny</h2>
                     <h3>Oddajesz:</h3>
-                    <h4><img src={svg2} alt=""/> 4 {kartofel}</h4>
-                    <h4><img src={svg1} alt=""/> dla lokalizacji:</h4>
+                    <h4><img src={svg2} alt=""/> {all.numOfBags} worki : {all.checked.join(" / ")}</h4>
+                    <h4><img src={svg1} alt=""/> dla lokalizacji: {all.cityOfCharity}, {all.checkedCharity.join(" / ")}, {all.optional}</h4>
                     <form>
                         <div>
                             <h3>Adres odbioru:</h3>
@@ -25,10 +24,10 @@ const FormSummary = ({setCurrentStep, kartofel}) => {
                                     <h3>Nr<br/>telefonu</h3>
                                 </div>
                                 <div>
-                                    <h3>cos</h3>
-                                    <h3>cos</h3>
-                                    <h3>cos</h3>
-                                    <h3>cos</h3>
+                                    <h3>{all.street}</h3>
+                                    <h3>{all.city}</h3>
+                                    <h3>{all.postCode}</h3>
+                                    <h3>{all.phone}</h3>
                                 </div>
                             </div>
                         </div>
@@ -41,9 +40,9 @@ const FormSummary = ({setCurrentStep, kartofel}) => {
                                     <h3>Uwagi<br/>dla kuriera</h3>
                                 </div>
                                 <div>
-                                    <h3>cos</h3>
-                                    <h3>cos</h3>
-                                    <h3>cos</h3>
+                                    <h3>{all.date}</h3>
+                                    <h3>{all.hour}</h3>
+                                    <h3>{all.comments}</h3>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +57,8 @@ const FormSummary = ({setCurrentStep, kartofel}) => {
 
 const mapStateToProps = (state) => {
     return {
-        kartofel: state.checked
+        all: state,
+        kartofel: state.checked,
     };
 };
 

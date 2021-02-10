@@ -211,18 +211,49 @@
       margin-bottom: 20px;
     }
 
-    div {
+    div.checkboxCharity {
       width: 680px;
+      display: flex;
+        flex-wrap: wrap;
 
-      .buttonCheckBox {
-        padding: 11px 26px;
-        border: 1px solid $color-alt;
-        font-size: 24px;
-        margin-right: 24px;
-        color: $color-text;
-        font-weight: 300;
-        margin-bottom: 24px;
-        cursor: pointer;
+      .checkbox {
+        display: flex;
+        align-items: center;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        input:checked ~ span {
+          background: $color-accent;
+        }
+
+        label {
+          z-index: 2;
+          border: 1px solid $color-alt;
+          padding: 10px 15px;
+          display: block;
+          position: relative;
+          cursor: pointer;
+          font-size: 24px;
+          font-weight: 300;
+          margin-left: 15px;
+
+          span {
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            cursor: pointer;
+            margin-right: 15px;
+          }
+        }
       }
     }
 
