@@ -5,28 +5,25 @@
 
 ## Technologies
 * React
+* Redux
 * JS
 * HTML & CSS
 * Font Awesome
 * SaSS
-* FireBase ( FireStore, Authentication )
+* FireBase ( Authentication )
 * Webpack
 
 
 ## Features
 List of features
 * Register and Login
-* Choosing preferences
-* Drawing a movie for Today
+* U can send form to give unnecessary clothes
 
- In the future 
-* Adding friends
-* Links where you can watch movie
-* Cast of the film
-
+# Live 
+* https://oddamapp.d2ss27ljvqyqto.amplifyapp.com
 
 ## Status
-Project is: _In_Progress_
+Project is: _Finished_
 .
 
 ## Available Scripts
